@@ -91,14 +91,27 @@ body{
     }
 }
 .fonctionnement{
-    @extend %flexcolumn-center;
+    @extend %flexrow;
     text-align: left;
+ 
+
 
     &_button{
         background-color: $fond;
         width:90%;
         height:80px;
         @extend %flexrow;
+
+        &--circle{
+            width:25px;
+            height:25px;
+            background-color: black;
+            color:white;
+            border-radius: 20px;
+            padding : 20px;
+            order:15;
+            @extend %flexcolumn-center;
+        }
 
         .fa-mobile-alt{
             @extend %icon-placement-fonctionnement;          

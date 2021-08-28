@@ -18,14 +18,14 @@ ul li {
   font-family: "Roboto", sans-serif;
 }
 
-.fonctionnement, .container_content, .container {
+.fonctionnement_button--circle, .container_content, .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.fonctionnement_button, .container_locate {
+.fonctionnement_button, .fonctionnement, .container_locate {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -117,4 +117,13 @@ body {
   background-color: #f6f6f6;
   width: 90%;
   height: 80px;
+}
+.fonctionnement_button--circle {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  order: 15;
 }/*# sourceMappingURL=style.css.map */
