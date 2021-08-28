@@ -18,14 +18,14 @@ ul li {
   font-family: "Roboto", sans-serif;
 }
 
-.fonctionnement_button--circle, .container_content, .container {
+.recettebloc_txt, .recettebloc, .fonctionnement_button .puce, .container_content, .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.fonctionnement_button, .fonctionnement, .container_locate {
+#recette, .fonctionnement_button, .fonctionnement, .container_locate {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -37,15 +37,34 @@ ul li {
   right: 10px;
 }
 
-.fonctionnement_button .fa-mobile-alt {
+.fonctionnement_button .fa-mobile-alt, .fonctionnement_button .fa-store, .fonctionnement_button .fa-list-ul {
   position: relative;
-  right: 30px;
+  right: 60px;
   font-size: 20px;
+}
+
+.fonctionnement_button p {
+  position: relative;
+  right: 20px;
+}
+
+.recettebloc, .fonctionnement_button, .btn {
+  box-shadow: 5px 5px 8px -3px rgba(0, 0, 0, 0.25);
+}
+
+.recettebloc img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 body {
   width: 100%;
   height: 100vh;
+}
+
+.titre {
+  margin-bottom: 6%;
+  font-size: 1.2rem;
 }
 
 .container {
@@ -104,26 +123,65 @@ body {
 
 #fonctionnement {
   padding: 3%;
-  font-size: 0.8rem;
-}
-#fonctionnement h2 {
-  padding-bottom: 6%;
 }
 
 .fonctionnement {
   text-align: left;
+  position: relative;
+  margin-bottom: 6%;
 }
 .fonctionnement_button {
   background-color: #f6f6f6;
-  width: 90%;
-  height: 80px;
+  width: 80%;
+  height: 70px;
+  transition: all 0.5s ease-in;
 }
-.fonctionnement_button--circle {
-  width: 25px;
-  height: 25px;
-  background-color: black;
-  color: white;
-  border-radius: 20px;
-  padding: 20px;
-  order: 15;
+.fonctionnement_button:hover {
+  background-color: #f5edff;
+}
+.fonctionnement_button:hover .fa-mobile-alt {
+  color: #9356DC;
+}
+.fonctionnement_button:hover .fa-store {
+  color: #9356DC;
+}
+.fonctionnement_button:hover .fa-list-ul {
+  color: #9356DC;
+}
+.fonctionnement_button p {
+  font-weight: 600;
+}
+.fonctionnement_button .fa-mobile-alt, .fonctionnement_button .fa-store, .fonctionnement_button .fa-list-ul {
+  color: grey;
+  transition: all 0.5s ease-in;
+}
+.fonctionnement_button .puce {
+  background-color: #9356dc;
+  color: #fff;
+  padding: 3px 7px 3px 7px;
+  border-radius: 12px;
+  font-size: 13px;
+  position: relative;
+  right: 27%;
+}
+
+#recette {
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 6%;
+}
+
+.recettebloc {
+  width: 90%;
+}
+.recettebloc_txt {
+  height: 70px;
+}
+.recettebloc img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 200px;
 }/*# sourceMappingURL=style.css.map */

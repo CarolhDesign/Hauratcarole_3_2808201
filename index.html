@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh My Food</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="SCSS/style.css">
     <script src="https://kit.fontawesome.com/69f6951327.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -26,15 +26,44 @@
     </header>
 
     <section id="fonctionnement">
-        <h2>Fonctionnement</h2>
+        <h2 class="titre">Fonctionnement</h2>
+
         <div class="fonctionnement">
             <div class="fonctionnement_button corner--rounded">
-                <div class="fonctionnement_button--circle">1</div>
+                <span class="puce">1</span>
                 <i class="fas fa-mobile-alt"></i> <p>Choisissez un restaurant</p>
             </div>
         </div>
+
+        <div class="fonctionnement">
+            <div class="fonctionnement_button corner--rounded">
+                <span class="puce">2</span>
+                <i class="fas fa-list-ul"></i> <p>Composez votre menu</p>
+            </div>
+        </div>
+
+        <div class="fonctionnement">
+            <div class="fonctionnement_button corner--rounded">
+                <span class="puce">2</span>
+                <i class="fas fa-store"></i> <p>Dégustez au restaurant</p>
+            </div>
+        </div>
+
     </section>
 
+    <section id="recette">
+        <h2 class="titre">Restaurants</h2>
+        <article class="recettebloc corner--rounded">
+            <img class="recettebloc_img " src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+            <div class="recettebloc_txt">
+                <h3>La note enchantée</h3>
+                <p>Charonne</p>
+                <div class="love--empty"><i class="far fa-heart"></i></div>
+                <div class="love--full"><i class="fas fa-heart"></i></div>
+
+            </div>
+        </article>
+    </section>
     
 
 </body>
