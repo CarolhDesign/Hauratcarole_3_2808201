@@ -1,0 +1,39 @@
+%fonts{
+    font-family: 'Roboto', sans-serif;
+}
+
+%titre{
+    font-family: 'Shrikhand', cursive;
+}
+
+%flexcolumn-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexrow-spacearound{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+%flexrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+%icon-placement{
+    position:relative;
+    right:10px;  
+}
+
+%icon-placement-fonctionnement{
+    position:relative;
+    right:30px;  
+    font-size: 20px;
+}
