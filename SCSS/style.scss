@@ -100,7 +100,7 @@ body{
 
     &_button{
         background-color: $fond;
-        width:80%;
+        width:90%;
         height:70px;
         @extend %flexrow;
         @extend %shadow-box;
@@ -142,8 +142,8 @@ body{
             padding: 3px 7px 3px 7px;
             border-radius: 12px;
             font-size: 13px;
-            position: relative;
-            right:27%;
+            position: absolute;
+            left:3.5%;
         
         }
 
@@ -171,6 +171,38 @@ body{
         @extend %flexcolumn-center;
     }
 
+    &_love{
+        color: $primary-color;
+        font-size: 20px;
+        position: absolute;
+        right:15%;
+        @extend %flexrow;
+
+        .coeur-vide{
+            position: relative;
+            left:20px;
+            z-index:999;
+            transition: all 1s ease;
+            
+
+            
+            &:hover + .coeur-plein{
+                opacity:1;
+
+            }
+        }
+
+        .coeur-plein{
+            opacity: 0;
+            transition: all 1s ease;
+            background: -webkit-linear-gradient(#9c47fc, #356ad2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+    }
+
     img{
         object-fit: cover;
         width:100%;
@@ -178,4 +210,3 @@ body{
         @extend %corner-top--rounded
     }
 }
-

@@ -25,7 +25,7 @@ ul li {
   align-items: center;
 }
 
-#recette, .fonctionnement_button, .fonctionnement, .container_locate {
+.recettebloc_love, #recette, .fonctionnement_button, .fonctionnement, .container_locate {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -132,7 +132,7 @@ body {
 }
 .fonctionnement_button {
   background-color: #f6f6f6;
-  width: 80%;
+  width: 90%;
   height: 70px;
   transition: all 0.5s ease-in;
 }
@@ -161,8 +161,8 @@ body {
   padding: 3px 7px 3px 7px;
   border-radius: 12px;
   font-size: 13px;
-  position: relative;
-  right: 27%;
+  position: absolute;
+  left: 3.5%;
 }
 
 #recette {
@@ -178,6 +178,28 @@ body {
 }
 .recettebloc_txt {
   height: 70px;
+}
+.recettebloc_love {
+  color: #9356DC;
+  font-size: 20px;
+  position: absolute;
+  right: 15%;
+}
+.recettebloc_love .coeur-vide {
+  position: relative;
+  left: 20px;
+  z-index: 999;
+  transition: all 1s ease;
+}
+.recettebloc_love .coeur-vide:hover + .coeur-plein {
+  opacity: 1;
+}
+.recettebloc_love .coeur-plein {
+  opacity: 0;
+  transition: all 1s ease;
+  background: -webkit-linear-gradient(#9c47fc, #356ad2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .recettebloc img {
   -o-object-fit: cover;
