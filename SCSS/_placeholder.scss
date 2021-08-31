@@ -13,6 +13,13 @@
     align-items: center;
 }
 
+%flexcolumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 %flexrow-spacearound{
     display: flex;
     flex-direction: row;
