@@ -16,6 +16,10 @@ body{
 .titre{
     margin-bottom: 6%;
     font-size: 1.2rem;
+
+    @include for-size(desktop) { 
+   margin-right:3%;
+     }
 }
 
 .container{
@@ -89,14 +93,34 @@ body{
 
 #fonctionnement {
     padding:3%;
-}
+    @extend %flexcolumn-center;
+    width:100%;
+
+    @include for-size(desktop) { 
+        display:flex;   
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+     }
+
+    }
+
 .fonctionnement{
-    @extend %flexrow;
     text-align: left;
     position: relative;
     margin-bottom: 6%;
- 
+    @extend %flexcolumn-center;
+    width:100%;
 
+
+
+    @include for-size(desktop) { 
+        display:flex;   
+        flex-direction: row;
+        flex-wrap: wrap;
+        width:400px;
+     }
 
     &_button{
         background-color: $fond;
@@ -105,7 +129,7 @@ body{
         @extend %flexrow;
         @extend %shadow-box;
         transition: all 0.5s ease-in;
-
+    
         &:hover{
             background-color: $hover-color-btn;
         }
@@ -151,7 +175,7 @@ body{
 }
 
 #recette{
-    @extend %flexrow;
+    @extend %flexcolumn-center;
     width:100%;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -159,20 +183,33 @@ body{
     padding:5%;
     background-color: $fond-locate;
 
+    @include for-size(desktop) { 
+        display:flex;   
+        flex-direction: row;
+        flex-wrap: wrap;
+     }
+
 }
 
 .recettebloc{
     @extend %flexcolumn-center;
-    width:90%;
+    width:100%;
     @extend %shadow-box;
     margin-bottom:5%;
+
+    @include for-size(desktop) { 
+        margin-right: 180px;
+    }
 
     &_nouveau{
         padding:8px 30px;
         background-color:$teriary-color;
         position:absolute;
-        margin-top: -40%;
-        margin-left: 55%;
+        right: 40px;
+
+        @include for-size(desktop) { 
+            right: 140px;
+        }
     }
     
 
@@ -228,11 +265,14 @@ body{
 
 #footer{
     background-color: $fond-footer;
-    padding:3%;
+    padding:6%;
 
-    .liens{
+    .logo{
+        fill:white;
+    }
+    .liens a{
         color:white;
+        font-weight: 400;
     }
 
 }
-

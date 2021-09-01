@@ -18,7 +18,7 @@ ul li {
   font-family: "Roboto", sans-serif;
 }
 
-.recettebloc, .fonctionnement_button .puce, .container_content, .container {
+.recettebloc, #recette, .fonctionnement_button .puce, .fonctionnement, #fonctionnement, .container_content, .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +31,7 @@ ul li {
   justify-content: center;
 }
 
-.recettebloc_love, #recette, .fonctionnement_button, .fonctionnement, .container_locate {
+.recettebloc_love, .fonctionnement_button, .container_locate {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -45,13 +45,13 @@ ul li {
 
 .fonctionnement_button .fa-mobile-alt, .fonctionnement_button .fa-store, .fonctionnement_button .fa-list-ul {
   position: relative;
-  right: 60px;
+  right: 20px;
   font-size: 20px;
 }
 
 .fonctionnement_button p {
   position: relative;
-  right: 20px;
+  right: 0px;
 }
 
 .recettebloc, .fonctionnement_button, .btn {
@@ -71,6 +71,11 @@ body {
 .titre {
   margin-bottom: 6%;
   font-size: 1.2rem;
+}
+@media (min-width: 1200px) {
+  .titre {
+    margin-right: 3%;
+  }
 }
 
 .container {
@@ -129,12 +134,31 @@ body {
 
 #fonctionnement {
   padding: 3%;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  #fonctionnement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .fonctionnement {
   text-align: left;
   position: relative;
   margin-bottom: 6%;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 400px;
+  }
 }
 .fonctionnement_button {
   background-color: #f6f6f6;
@@ -179,17 +203,33 @@ body {
   padding: 5%;
   background-color: #eaeaea;
 }
+@media (min-width: 1200px) {
+  #recette {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
 .recettebloc {
-  width: 90%;
+  width: 100%;
   margin-bottom: 5%;
+}
+@media (min-width: 1200px) {
+  .recettebloc {
+    margin-right: 180px;
+  }
 }
 .recettebloc_nouveau {
   padding: 8px 30px;
   background-color: #99E2D0;
   position: absolute;
-  margin-top: -40%;
-  margin-left: 55%;
+  right: 40px;
+}
+@media (min-width: 1200px) {
+  .recettebloc_nouveau {
+    right: 140px;
+  }
 }
 .recettebloc img {
   -o-object-fit: cover;
@@ -230,8 +270,12 @@ body {
 
 #footer {
   background-color: #353535;
-  padding: 3%;
+  padding: 6%;
 }
-#footer .liens {
+#footer .logo {
+  fill: white;
+}
+#footer .liens a {
   color: white;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
