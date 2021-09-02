@@ -31,7 +31,7 @@ ul li {
   justify-content: center;
 }
 
-.restaurantbloc_love, .fonctionnement_button, .container_locate {
+.restaurantbloc_love, .fonctionnement_button, .container_locate, .container_logo {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -136,6 +136,8 @@ body {
 }
 .container_logo {
   background-color: white;
+  justify-content: center;
+  align-items: center;
   padding: 2%;
 }
 .container_logo img {

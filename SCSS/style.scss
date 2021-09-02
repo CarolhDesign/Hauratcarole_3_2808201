@@ -73,6 +73,8 @@ body{
     @extend %flexcolumn-center;
     padding-bottom:9%;
 
+
+
     @include for-size(desktop) { 
         padding:2%;
         padding-bottom:4%;
@@ -82,7 +84,11 @@ body{
 
     &_logo{
         background-color:white;
+        @extend %flexrow;
+        justify-content: center;
+        align-items: center;
         padding: 2%;
+
         img{
             width:180px;
         }
