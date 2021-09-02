@@ -157,7 +157,9 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 400px;
+    justify-content: center;
+    align-items: center;
+    width: 440px;
   }
 }
 .fonctionnement_button {
@@ -210,15 +212,29 @@ body {
     flex-wrap: wrap;
   }
 }
+@media (min-width: 1200px) {
+  #recette .titre {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+  }
+}
 
 .recettebloc {
-  width: 100%;
+  width: 92%;
   margin-bottom: 5%;
+  position: relative;
 }
 @media (min-width: 1200px) {
   .recettebloc {
-    margin-right: 180px;
+    margin-right: 50px;
+    flex-basis: 20%;
+    flex-wrap: nowrap;
   }
+}
+.recettebloc a {
+  width: 100%;
 }
 .recettebloc_nouveau {
   padding: 8px 30px;
@@ -228,7 +244,8 @@ body {
 }
 @media (min-width: 1200px) {
   .recettebloc_nouveau {
-    right: 140px;
+    right: 8%;
+    top: 15%;
   }
 }
 .recettebloc img {

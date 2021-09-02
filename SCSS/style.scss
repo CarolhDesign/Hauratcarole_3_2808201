@@ -13,6 +13,7 @@ body{
     height:100vh;
 }
 
+
 .titre{
     margin-bottom: 6%;
     font-size: 1.2rem;
@@ -113,13 +114,14 @@ body{
     @extend %flexcolumn-center;
     width:100%;
 
-
-
     @include for-size(desktop) { 
         display:flex;   
         flex-direction: row;
         flex-wrap: wrap;
-        width:400px;
+        justify-content: center;
+        align-items: center;
+        width:440px;
+
      }
 
     &_button{
@@ -129,7 +131,7 @@ body{
         @extend %flexrow;
         @extend %shadow-box;
         transition: all 0.5s ease-in;
-    
+
         &:hover{
             background-color: $hover-color-btn;
         }
@@ -189,16 +191,31 @@ body{
         flex-wrap: wrap;
      }
 
+     .titre{
+        @include for-size(desktop) { 
+            display:flex;   
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-basis:100%;
+         }
+     }
+
 }
 
 .recettebloc{
     @extend %flexcolumn-center;
-    width:100%;
+    width:92%;
     @extend %shadow-box;
     margin-bottom:5%;
-
+    position:relative;
     @include for-size(desktop) { 
-        margin-right: 180px;
+        margin-right: 50px;
+        flex-basis:20%;
+        flex-wrap: nowrap;
+    }
+
+    a{
+        width:100%;
     }
 
     &_nouveau{
@@ -208,7 +225,8 @@ body{
         right: 40px;
 
         @include for-size(desktop) { 
-            right: 140px;
+            right: 8%;
+            top: 15%;
         }
     }
     
@@ -217,7 +235,7 @@ body{
         object-fit: cover;
         width:100%;
         height:200px;
-        @extend %corner-top--rounded
+        @extend %corner-top--rounded;
     } 
 
 
