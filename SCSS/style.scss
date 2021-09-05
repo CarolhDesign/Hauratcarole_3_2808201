@@ -24,10 +24,7 @@ body{
     top:0;
     left:0;
     z-index:9999;
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(column,center,center,nowrap);
     overflow: hidden;
 
     .loader{
@@ -56,7 +53,11 @@ body{
     
 }
 
-
+#header{
+    width:100%;
+    margin:0 auto;
+    overflow: hidden;
+}
 // Titres qui se trouvent sur la page
 .titre{
     margin-bottom: 6%;
@@ -70,13 +71,15 @@ body{
 // Début du site
 .container{
     width:100%;
-    @extend %flexcolumn-center;
+    @include flexbox(column,center,center,nowrap);
     padding-bottom:9%;
+    overflow: hidden;
+
 
 
 
     @include for-size(desktop) { 
-        padding:2%;
+        padding:0;
         padding-bottom:4%;
 
      }
@@ -84,9 +87,7 @@ body{
 
     &_logo{
         background-color:white;
-        @extend %flexrow;
-        justify-content: center;
-        align-items: center;
+        @include flexbox(row,center,center,nowrap);
         padding: 2%;
 
         img{
@@ -97,7 +98,7 @@ body{
     &_locate{
         background-color: $fond-locate;
         width:100%;
-        @extend %flexrow;
+        @include flexbox(row,center,center,nowrap);
         padding:3%;
         border-top: 2px solid $fond-footer;
 
@@ -114,7 +115,7 @@ body{
         background-color: $fond;
         width:100%;
         padding:2%;
-        @extend %flexcolumn-center;
+        @include flexbox(column,center,center,nowrap);
         height:280px;
 
         @include for-size(desktop) { 
@@ -167,15 +168,11 @@ body{
 // Partie fonctionnement
 #fonctionnement {
     padding:3%;
-    @extend %flexcolumn-center;
+    @include flexbox(column,center,center,wrap);
     width:100%;
 
     @include for-size(desktop) { 
-        display:flex;   
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        @include flexbox(row,center,center,nowrap);
         padding:2%;
      }
 
@@ -185,15 +182,11 @@ body{
     text-align: left;
     position: relative;
     margin-bottom: 6%;
-    @extend %flexcolumn-center;
+    @include flexbox(column,center,center,wrap);
     width:100%;
 
     @include for-size(desktop) { 
-        display:flex;   
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+        @include flexbox(row,center,center,nowrap);
         width:440px;
      }
 
@@ -201,7 +194,7 @@ body{
         background-color: $fond;
         width:90%;
         height:70px;
-        @extend %flexrow;
+        @include flexbox(row,center,center,nowrap);
         @extend %shadow-box;
         transition: all 0.5s ease-in;
 
@@ -235,7 +228,7 @@ body{
         }
 
          .puce{
-             @extend %flexcolumn-center;
+            @include flexbox(column,center,center,nowrap);
             background-color: $primary-color;
             color: #fff;
             padding: 3px 7px 3px 7px;
@@ -251,7 +244,7 @@ body{
 
 // Restaurants
 #restaurant{
-    @extend %flexcolumn-center;
+    @include flexbox(column,center,center,nowrap);
     width:100%;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -261,22 +254,15 @@ body{
     font-weight: 400;
 
     @include for-size(desktop) { 
-        display:flex;   
-        flex-direction: row;
-        flex-wrap: wrap;
+        @include flexbox(row,center,center,wrap);
         padding:2%;
-        align-items: center;  
-        justify-content: center; 
+     
      }
 
      .titre{
         @include for-size(desktop) { 
-            display:flex;   
-            flex-direction: column;
-            flex-wrap: wrap;
+            @include flexbox(column,center,center,wrap);
             flex-basis:100%;
-            align-self: center;
-            align-content: center;
             margin-bottom:2%;
          }
      }
@@ -284,7 +270,7 @@ body{
 }
 
 .restaurantbloc{
-    @extend %flexcolumn-center;
+    @include flexbox(column,center,center,wrap);
     width:92%;
     @extend %shadow-box;
     margin-bottom:5%;
@@ -323,7 +309,7 @@ body{
 
     &_txt{
         height: 70px;
-        @extend %flexcolumn;
+        @include flexbox(column,center,center,wrap);
         align-self: flex-start;
         padding-left: 6%;
 
@@ -340,7 +326,7 @@ body{
         font-size: 20px;
         position: absolute;
         right:15%;
-        @extend %flexrow;
+        @include flexbox(row,center,center,wrap);
 
         .coeur-vide{
             position: relative;
@@ -405,3 +391,58 @@ body{
 #hidethis { 
     animation: hidethis 0s 3s forwards; 
 }
+
+//menu-3.html
+
+.container_logo--menu{
+        background-color: white;
+        padding: 1%;
+        width:100%;
+        position:relative;
+        top:20px;
+        @include flexbox (row, center,center,nowrap);
+
+         .arrow{
+             position:relative;
+             right:100px;
+         }
+         img{
+             width:180px;
+         }
+}
+
+#menu-3{
+    @include flexbox(column,center,center,wrap);
+    width:100%;
+
+    .background-image{
+        @include backgroundmenu(menu3);
+    }
+
+    .menu_container{
+        background-color: white;
+        width: 100%;
+    
+        .menu_titre{
+            padding:10%;
+            width: 100%;
+            @include flexbox(row,center,center,nowrap);
+            position:relative;
+        
+            h2{
+                position: relative;
+                @extend %fonts;
+                right:150px;
+            }
+        
+            .restaurantbloc_love{
+                position: relative;
+                left:80px;
+            }
+        }
+    }
+
+    
+}
+
+

@@ -11,3 +11,22 @@
       @media (min-width: 1800px) { @content; }
     }
   }
+
+  @mixin flexbox($dir, $align, $ialign, $wrap){
+    display:flex;
+    flex-direction: $dir;
+    justify-content: $align;
+    align-items: $ialign;
+    flex-wrap: $wrap;
+  }
+
+  @mixin backgroundmenu($img-menu){
+    background-image: url("/images/restaurants/#{$img-menu}.jpg");
+    background-size: cover;
+    width:100%;
+    height:500px;
+  }
+
+  @mixin corner-rounded-menu{
+    border-radius: 30px;
+  }
