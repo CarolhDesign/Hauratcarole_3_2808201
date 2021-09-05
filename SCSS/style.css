@@ -18,6 +18,10 @@ ul li {
   font-family: "Roboto", sans-serif;
 }
 
+#menu-3 .menu_container .menu_titre h2 {
+  font-family: "Shrikhand", cursive;
+}
+
 .container_locate .fa-map-marker-alt {
   position: relative;
   right: 10px;
@@ -34,7 +38,7 @@ ul li {
   right: 0px;
 }
 
-.restaurantbloc, .fonctionnement_button, .btn {
+#menu-3 .menu_container .menu_entrees_bloc, .restaurantbloc, .fonctionnement_button, .btn {
   box-shadow: 5px 5px 8px -3px rgba(0, 0, 0, 0.25);
 }
 
@@ -478,6 +482,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  background-color: #f6f6f6;
 }
 #menu-3 .background-image {
   background-image: url("/images/restaurants/menu3.jpg");
@@ -486,8 +491,11 @@ body {
   height: 500px;
 }
 #menu-3 .menu_container {
-  background-color: white;
   width: 100%;
+  position: relative;
+  top: -50px;
+  border-radius: 45px;
+  background-color: #f6f6f6;
 }
 #menu-3 .menu_container .menu_titre {
   padding: 10%;
@@ -501,9 +509,54 @@ body {
 }
 #menu-3 .menu_container .menu_titre h2 {
   position: relative;
-  right: 150px;
+  right: 130px;
+  font-size: 2rem;
 }
 #menu-3 .menu_container .menu_titre .restaurantbloc_love {
   position: relative;
-  left: 80px;
+  left: 0;
+}
+#menu-3 .menu_container .menu_entrees {
+  position: relative;
+  padding: 5%;
+  top: -40px;
+}
+#menu-3 .menu_container .menu_entrees_titre {
+  font-weight: 300;
+  padding-bottom: 10%;
+}
+#menu-3 .menu_container .menu_entrees_titre::after {
+  content: "";
+  width: 50px;
+  height: 7px;
+  border-bottom: 4px solid #99E2D0;
+  position: absolute;
+}
+#menu-3 .menu_container .menu_entrees_bloc {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-radius: 25px;
+  flex-basis: 100%;
+  height: 80px;
+  padding: 2%;
+  position: relative;
+}
+#menu-3 .menu_container .menu_entrees_bloc_prix {
+  position: relative;
+  top: 40px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+}
+#menu-3 .menu_container .menu_entrees_bloc_texte {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding: 4%;
 }/*# sourceMappingURL=style.css.map */

@@ -414,15 +414,19 @@ body{
 #menu-3{
     @include flexbox(column,center,center,wrap);
     width:100%;
+    background-color: $fond;
 
     .background-image{
         @include backgroundmenu(menu3);
     }
 
     .menu_container{
-        background-color: white;
         width: 100%;
-    
+        position: relative;
+        top:-50px;
+        @include corner-rounded-menu(45px);
+        background-color: $fond;
+
         .menu_titre{
             padding:10%;
             width: 100%;
@@ -432,12 +436,54 @@ body{
             h2{
                 position: relative;
                 @extend %fonts;
-                right:150px;
+                right:130px;
+                @extend %titre;
+                font-size: 2rem;
             }
         
             .restaurantbloc_love{
                 position: relative;
-                left:80px;
+                left:0;
+            }
+        }
+
+        .menu_entrees{
+            position: relative;
+            padding:5%;
+            top:-40px;
+            &_titre{
+                font-weight: 300;
+                padding-bottom: 10%;
+                &::after{
+                    content:"";
+                    width:50px;
+                    height:7px;
+                    border-bottom: 4px solid $teriary-color;
+                    position: absolute;
+                }
+            }
+
+            &_bloc{
+                background-color:white;
+                @include flexbox(row,flex-start,center,nowrap);
+                @include corner-rounded-menu(25px);
+                flex-basis: 100%;
+                height:80px;
+                padding:2%;
+                position:relative;
+                @extend %shadow-box;
+
+                &_prix{
+                    position:relative;
+                    top:40px;
+                    left:100px;
+                    width:100px;
+                    height:100px;
+                }
+                &_texte{
+                    @include flexbox(column,flex-start,flex-start,nowrap);
+                    padding:4%;
+                }
             }
         }
     }

@@ -27,6 +27,6 @@
     height:500px;
   }
 
-  @mixin corner-rounded-menu{
-    border-radius: 30px;
+  @mixin corner-rounded-menu($value){
+    border-radius: $value;
   }
