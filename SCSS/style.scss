@@ -424,8 +424,19 @@ body{
         width: 100%;
         position: relative;
         top:-50px;
+        padding:2%;
         @include corner-rounded-menu(45px);
         background-color: $fond;
+
+        .menu_button{
+            @include flexbox(column, center, center, nowrap);
+        }
+
+        @include for-size(desktop) { 
+            width:80%;
+            -webkit-box-shadow: 5px 5px 8px -3px rgba(0,0,0,0.25); 
+            box-shadow: 5px 5px 8px -3px rgba(0,0,0,0.25);
+        }
 
         .menu_titre{
             padding:10%;
@@ -439,6 +450,8 @@ body{
                 right:130px;
                 @extend %titre;
                 font-size: 2rem;
+
+
             }
         
             .restaurantbloc_love{
@@ -461,6 +474,8 @@ body{
                     border-bottom: 4px solid $teriary-color;
                     position: absolute;
                 }
+
+
             }
 
             &_bloc{
@@ -468,6 +483,7 @@ body{
                 @include flexbox(row,flex-start,center,nowrap);
                 @include corner-rounded-menu(25px);
                 flex-basis: 100%;
+                margin-bottom:3%;
                 height:80px;
                 padding:2%;
                 position:relative;
@@ -495,12 +511,15 @@ body{
                     &:hover .icon-check{
                         animation: rotate 0.7s ease-in;
                     } 
-
-                
                     
                     &:hover{
                         opacity:1;
                     } 
+
+                    @include for-size(desktop) { 
+                        width:100px;
+                        height:123px;
+                            }
                 }
                 
                 &_prix{
