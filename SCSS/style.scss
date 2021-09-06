@@ -476,18 +476,28 @@ body{
                 &_anime{
                     color:white;
                     font-size:1.5rem;
-                    width:70px;
+                    width:80px;
                     height:97px;
-                    position: relative;
-                    left:10px;
+                    top:0;
+                    position: absolute;
+                    right:0px;
                     background-color: $teriary-color;
                     @include corner-rounded-top-menu(15px);
-                    @include flexbox(column,center,center,nowrap);
+                    @include flexbox(row,center,center,nowrap);
                     opacity:0;
+                    transition: all 0.5s ease-in;
+                    z-index: 99;
+                    
+                    &:hover + .menu_entrees_bloc_prix{
+                        transform: translate(-70px);
+                    }    
 
-                    .icon-check:hover{
-                        animation: rotate ease-in 1s ;
-                    }
+                    &:hover .icon-check{
+                        animation: rotate 0.7s ease-in;
+                    } 
+
+                
+                    
                     &:hover{
                         opacity:1;
                     } 
@@ -496,20 +506,27 @@ body{
                 &_prix{
                     position:relative;
                     top:0px;
-                    left:80px;
                     width:100px;
                     height:100px;
                     display:block;
                     margin: 0 auto;
                     @include flexbox(column,center,center,nowrap);
+                    transition: all 1.6s ease-in;
 
-                        &:hover + .menu_entrees_bloc_anime{
+
+                    &:hover + .menu_entrees_bloc_anime{
                         opacity:1;
                     }
                 }
+
                 &_texte{
                     @include flexbox(column,flex-start,flex-start,nowrap);
                     padding:4%;
+                    width:100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    flex-basis:100%;
                 }
             }
         }
