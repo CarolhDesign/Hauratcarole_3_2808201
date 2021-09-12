@@ -428,6 +428,8 @@ body{
         @include corner-rounded-menu(45px);
         background-color: $fond;
 
+        
+
         .menu_button{
             @include flexbox(column, center, center, nowrap);
         }
@@ -443,6 +445,11 @@ body{
             width: 100%;
             @include flexbox(row,center,center,nowrap);
             position:relative;
+
+            @include for-size(desktop) { 
+                padding:2%;
+            }
+            
         
             h2{
                 position: relative;
@@ -450,7 +457,6 @@ body{
                 right:130px;
                 @extend %titre;
                 font-size: 2rem;
-
 
             }
         
@@ -464,9 +470,20 @@ body{
             position: relative;
             padding:5%;
             top:-40px;
+
+            @include for-size(desktop) { 
+               @include flexbox(row, space-around, center, wrap);
+               padding:2%;
+            }
+
             &_titre{
                 font-weight: 300;
                 padding-bottom: 10%;
+
+                @include for-size(desktop) { 
+                    padding-bottom: 2%;
+                }
+
                 &::after{
                     content:"";
                     width:50px;
@@ -475,6 +492,9 @@ body{
                     position: absolute;
                 }
 
+            @include for-size(desktop) { 
+                padding:2%;
+            }
 
             }
 
@@ -489,11 +509,12 @@ body{
                 position:relative;
                 @extend %shadow-box;
 
+
                 &_anime{
                     color:white;
                     font-size:1.5rem;
-                    width:80px;
-                    height:97px;
+                    width:20%;
+                    height:100%;
                     top:0;
                     position: absolute;
                     right:0px;
@@ -503,6 +524,10 @@ body{
                     opacity:0;
                     transition: all 0.5s ease-in;
                     z-index: 99;
+
+                    @include for-size(desktop) { 
+                        height:159px!important;
+                    }
                     
                     &:hover + .menu_entrees_bloc_prix{
                         transform: translate(-70px);
