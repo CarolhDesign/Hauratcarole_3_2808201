@@ -613,6 +613,11 @@ body {
 #menu-3 .menu_container .menu_entrees_bloc_anime:hover + .menu_entrees_bloc_prix {
   transform: translate(-70px);
 }
+@media (min-width: 600px) {
+  #menu-3 .menu_container .menu_entrees_bloc_anime:hover + .menu_entrees_bloc_prix {
+    transform: translate(-120px);
+  }
+}
 #menu-3 .menu_container .menu_entrees_bloc_anime:hover .icon-check {
   -webkit-animation: rotate 0.7s ease-in;
           animation: rotate 0.7s ease-in;
@@ -653,8 +658,12 @@ body {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   flex-basis: 100%;
+}
+#menu-3 .menu_container .menu_entrees_bloc_texte h3, #menu-3 .menu_container .menu_entrees_bloc_texte p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @-webkit-keyframes rotate {

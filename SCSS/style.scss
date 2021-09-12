@@ -529,8 +529,13 @@ body{
                         height:159px!important;
                     }
                     
+                    
                     &:hover + .menu_entrees_bloc_prix{
                         transform: translate(-70px);
+
+                        @include for-size(tablette) { 
+                            transform: translate(-120px);
+                        }
                     }    
 
                     &:hover .icon-check{
@@ -544,7 +549,7 @@ body{
                     @include for-size(desktop) { 
                         width:100px;
                         height:123px;
-                            }
+                    }
                 }
                 
                 &_prix{
@@ -569,8 +574,13 @@ body{
                     width:100%;
                     white-space: nowrap;
                     overflow: hidden;
-                    text-overflow: ellipsis;
                     flex-basis:100%;
+
+                    h3, p{
+                        text-overflow: ellipsis;
+                        white-space : nowrap;
+                        overflow: hidden;
+                    }
                 }
             }
         }
