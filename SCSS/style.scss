@@ -404,7 +404,7 @@ body{
 
          .arrow{
              position:relative;
-             right:100px;
+             right:50px;
          }
          img{
              width:180px;
@@ -472,6 +472,8 @@ body{
             padding:5%;
             top:-40px;
 
+
+
             @include for-size(desktop) { 
                @include flexbox(row, space-around, center, wrap);
                padding:2%;
@@ -509,6 +511,7 @@ body{
                 padding:2%;
                 position:relative;
                 @extend %shadow-box;
+                animation: fade 2s ease-in;
 
 
                 &_anime{
@@ -601,5 +604,15 @@ body{
 
     100%{
         transform: rotate(360deg);
+    }
+}
+
+@keyframes fade{
+    0%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
     }
 }

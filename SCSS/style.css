@@ -715,7 +715,7 @@ body {
 
 .container_logo--menu .arrow {
   position: relative;
-  right: 100px;
+  right: 50px;
 }
 
 .container_logo--menu img {
@@ -903,6 +903,8 @@ body {
   height: 80px;
   padding: 2%;
   position: relative;
+  -webkit-animation: fade 2s ease-in;
+          animation: fade 2s ease-in;
 }
 
 #menu-3 .menu_container .menu_entrees_bloc_anime {
@@ -1047,6 +1049,24 @@ body {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
