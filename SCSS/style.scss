@@ -428,8 +428,6 @@ body{
         @include corner-rounded-menu(45px);
         background-color: $fond;
 
-        
-
         .menu_button{
             @include flexbox(column, center, center, nowrap);
         }
@@ -454,10 +452,13 @@ body{
             h2{
                 position: relative;
                 @extend %fonts;
-                right:130px;
+                right:40px;
                 @extend %titre;
-                font-size: 2rem;
-
+                font-size: 1.6rem;
+                @include for-size(desktop) { 
+                    font-size: 2rem;
+                 }
+     
             }
         
             .restaurantbloc_love{
@@ -518,6 +519,7 @@ body{
                     top:0;
                     position: absolute;
                     right:0px;
+                    display:block;
                     background-color: $teriary-color;
                     @include corner-rounded-top-menu(15px);
                     @include flexbox(row,center,center,nowrap);
@@ -526,12 +528,17 @@ body{
                     z-index: 99;
 
                     @include for-size(desktop) { 
-                        height:159px!important;
+                        height:100%!important;
                     }
                     
-                    
+                    @include for-size(big-desktop) { 
+                        height:159px!important;
+                    }
+
                     &:hover + .menu_entrees_bloc_prix{
-                        transform: translate(-70px);
+                        transform: translate(-50px);
+                        width:140px;
+                        padding-left:10%;
 
                         @include for-size(tablette) { 
                             transform: translate(-120px);
@@ -557,7 +564,7 @@ body{
                     top:0px;
                     width:100px;
                     height:100px;
-                    display:block;
+                    flex-grow:2;
                     margin: 0 auto;
                     @include flexbox(column,center,center,nowrap);
                     transition: all 1.6s ease-in;
@@ -569,16 +576,13 @@ body{
                 }
 
                 &_texte{
-                    @include flexbox(column,flex-start,flex-start,nowrap);
                     padding:4%;
-                    width:100%;
-                    white-space: nowrap;
-                    overflow: hidden;
                     flex-basis:100%;
-
-                    h3, p{
+                    flex-grow:1;
+                    overflow: hidden;
+                    p,h3{
                         text-overflow: ellipsis;
-                        white-space : nowrap;
+                        white-space: nowrap;
                         overflow: hidden;
                     }
                 }
