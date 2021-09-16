@@ -13,6 +13,11 @@ body{
     height:100vh;
 }
 
+.fade-in {
+	-webkit-animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000)  0.5s both;
+	        animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000)  0.5s both;
+}
+
 // Loader
 .container_loader{
     width:100%;
@@ -154,6 +159,11 @@ body{
     @extend %shadow-box;
     font-weight: 500;
     font-size: 1rem;
+    transition: all 0.5s ease-in;
+
+    &:hover{
+        @extend %shadow-box--hover;
+    }
 
     &--primary{
         color:white;
@@ -511,8 +521,6 @@ body{
                 padding:2%;
                 position:relative;
                 @extend %shadow-box;
-                animation: fade 2s ease-in;
-
 
                 &_anime{
                     color:white;
@@ -607,12 +615,28 @@ body{
     }
 }
 
-@keyframes fade{
-    0%{
-        opacity:0;
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
     }
-
-    100%{
-        opacity:1;
+    100% {
+      opacity: 1;
     }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  @for $i from 1 to 12
+{
+  .animationdelay-#{$i} 
+  {
+    animation-delay : 0.5s*$i;
+  }
 }
