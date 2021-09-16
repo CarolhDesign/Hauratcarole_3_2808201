@@ -1124,14 +1124,4 @@ body {
   -webkit-animation-delay: 4.5s;
           animation-delay: 4.5s;
 }
-
-.animationdelay-10 {
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
-}
-
-.animationdelay-11 {
-  -webkit-animation-delay: 5.5s;
-          animation-delay: 5.5s;
-}
 /*# sourceMappingURL=style.css.map */
