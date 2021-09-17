@@ -21,7 +21,7 @@
   }
 
   @mixin backgroundmenu($img-menu){
-    background-image: url("images/restaurants/#{$img-menu}.jpg");
+    background-image: url("/Hauratcarole_3_2808201/images/restaurants/#{$img-menu}.jpg");
     background-size: cover;
     width:100%;
     height:500px;
