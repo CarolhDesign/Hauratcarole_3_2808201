@@ -441,200 +441,196 @@ body{
     }
 }
 
-    #menu-2{
-        @include flexbox(column,center,center,wrap);
-        width:100%;
-        background-color: $fond;
-    
-        .background-image{
-            @include backgroundmenu(menu2);
-        }
+#menu-2{
+    @include flexbox(column,center,center,wrap);
+    width:100%;
+    background-color: $fond;
+
+    .background-image{
+        @include backgroundmenu(menu2);
+    }
+}
+
+#menu-1{
+    @include flexbox(column,center,center,wrap);
+    width:100%;
+    background-color: $fond;
+
+    .background-image{
+        @include backgroundmenu(menu1);
+    }
+}
+
+.menu_container{
+    width: 100%;
+    position: relative;
+    top:-50px;
+    padding:2%;
+    @include corner-rounded-menu(45px);
+    background-color: $fond;
+
+    .menu_button{
+        @include flexbox(column, center, center, nowrap);
     }
 
-    #menu-1{
-        @include flexbox(column,center,center,wrap);
-        width:100%;
-        background-color: $fond;
-    
-        .background-image{
-            @include backgroundmenu(menu1);
-        }
+    @include for-size(desktop) { 
+        width:80%;
+        -webkit-box-shadow: 5px 5px 8px -3px rgba(0,0,0,0.25); 
+        box-shadow: 5px 5px 8px -3px rgba(0,0,0,0.25);
     }
 
-    .menu_container{
-        width: 100%;
+    .menu_entrees{
         position: relative;
-        top:-50px;
-        padding:2%;
-        @include corner-rounded-menu(45px);
-        background-color: $fond;
+        padding:5%;
+        top:-40px;
 
-        .menu_button{
-            @include flexbox(column, center, center, nowrap);
-        }
+
 
         @include for-size(desktop) { 
-            width:80%;
-            -webkit-box-shadow: 5px 5px 8px -3px rgba(0,0,0,0.25); 
-            box-shadow: 5px 5px 8px -3px rgba(0,0,0,0.25);
+           @include flexbox(row, space-around, center, wrap);
+           padding:2%;
         }
 
-        .menu_titre{
-            padding:10%;
-            width: 100%;
-            @include flexbox(row,center,center,nowrap);
+        &_titre{
+            font-weight: 300;
+            padding-bottom: 10%;
+
+            @include for-size(desktop) { 
+                padding-bottom: 2%;
+            }
+
+            &::after{
+                content:"";
+                width:50px;
+                height:7px;
+                border-bottom: 4px solid $teriary-color;
+                position: absolute;
+            }
+
+        @include for-size(desktop) { 
+            padding:2%;
+        }
+
+        }
+
+        &_bloc{
+            background-color:white;
+            @include flexbox(row,flex-start,center,nowrap);
+            @include corner-rounded-menu(25px);
+            flex-basis: 100%;
+            margin-bottom:3%;
+            height:80px;
+            padding:2%;
             position:relative;
+            @extend %shadow-box;
 
-            @include for-size(desktop) { 
-                padding:2%;
-            }
-            
-        
-            h2{
-                position: relative;
-                @extend %fonts;
-                right:40px;
-                @extend %titre;
-                font-size: 1.6rem;
-                @include for-size(desktop) { 
-                    font-size: 2rem;
-                 }
-     
-            }
-        
-            .restaurantbloc_love{
-                position: relative;
-                left:0;
-            }
-        }
-
-        .menu_entrees{
-            position: relative;
-            padding:5%;
-            top:-40px;
-
-
-
-            @include for-size(desktop) { 
-               @include flexbox(row, space-around, center, wrap);
-               padding:2%;
-            }
-
-            &_titre{
-                font-weight: 300;
-                padding-bottom: 10%;
+            &_anime{
+                color:white;
+                font-size:1.5rem;
+                width:20%;
+                height:100%;
+                top:0;
+                position: absolute;
+                right:0px;
+                display:block;
+                background-color: $teriary-color;
+                @include corner-rounded-top-menu(15px);
+                @include flexbox(row,center,center,nowrap);
+                opacity:0;
+                transition: all 0.5s ease-in;
+                z-index: 99;
 
                 @include for-size(desktop) { 
-                    padding-bottom: 2%;
-                }
-
-                &::after{
-                    content:"";
-                    width:50px;
-                    height:7px;
-                    border-bottom: 4px solid $teriary-color;
-                    position: absolute;
-                }
-
-            @include for-size(desktop) { 
-                padding:2%;
-            }
-
-            }
-
-            &_bloc{
-                background-color:white;
-                @include flexbox(row,flex-start,center,nowrap);
-                @include corner-rounded-menu(25px);
-                flex-basis: 100%;
-                margin-bottom:3%;
-                height:80px;
-                padding:2%;
-                position:relative;
-                @extend %shadow-box;
-
-                &_anime{
-                    color:white;
-                    font-size:1.5rem;
-                    width:20%;
-                    height:100%;
-                    top:0;
-                    position: absolute;
-                    right:0px;
-                    display:block;
-                    background-color: $teriary-color;
-                    @include corner-rounded-top-menu(15px);
-                    @include flexbox(row,center,center,nowrap);
-                    opacity:0;
-                    transition: all 0.5s ease-in;
-                    z-index: 99;
-
-                    @include for-size(desktop) { 
-                        height:100%!important;
-                    }
-                    
-                    @include for-size(big-desktop) { 
-                        height:159px!important;
-                    }
-
-                    &:hover + .menu_entrees_bloc_prix{
-                        transform: translate(-50px);
-                        width:140px;
-                        padding-left:10%;
-
-                        @include for-size(tablette) { 
-                            transform: translate(-120px);
-                        }
-                    }    
-
-                    &:hover .icon-check{
-                        animation: rotate 0.7s ease-in;
-                    } 
-                    
-                    &:hover{
-                        opacity:1;
-                    } 
-
-                    @include for-size(desktop) { 
-                        width:100px;
-                        height:123px;
-                    }
+                    height:100%!important;
                 }
                 
-                &_prix{
-                    position:relative;
-                    top:0px;
-                    width:100px;
-                    height:100px;
-                    flex-grow:2;
-                    margin: 0 auto;
-                    @include flexbox(column,center,center,nowrap);
-                    transition: all 1.6s ease-in;
-
-
-                    &:hover + .menu_entrees_bloc_anime{
-                        opacity:1;
-                    }
+                @include for-size(big-desktop) { 
+                    height:159px!important;
                 }
 
-                &_texte{
-                    padding:4%;
-                    flex-basis:100%;
-                    flex-grow:1;
-                    overflow: hidden;
-                    p,h3{
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
+                &:hover + .menu_entrees_bloc_prix{
+                    transform: translate(-50px);
+                    width:140px;
+                    padding-left:10%;
+
+                    @include for-size(tablette) { 
+                        transform: translate(-120px);
                     }
+                }    
+
+                &:hover .icon-check{
+                    animation: rotate 0.7s ease-in;
+                } 
+                
+                &:hover{
+                    opacity:1;
+                } 
+
+                @include for-size(desktop) { 
+                    width:100px;
+                    height:123px;
+                }
+            }
+            
+            &_prix{
+                position:relative;
+                top:0px;
+                width:100px;
+                height:100px;
+                flex-grow:2;
+                margin: 0 auto;
+                @include flexbox(column,center,center,nowrap);
+                transition: all 1.6s ease-in;
+
+
+                &:hover + .menu_entrees_bloc_anime{
+                    opacity:1;
+                }
+            }
+
+            &_texte{
+                padding:4%;
+                flex-basis:100%;
+                flex-grow:1;
+                overflow: hidden;
+                p,h3{
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
                 }
             }
         }
     }
+}
 
+.menu_titre{
+    padding:10%;
+    width: 100%;
+    @include flexbox(row,center,center,nowrap);
+    position:relative;
+
+    @include for-size(desktop) { 
+        padding:2%;
+    }
     
 
+    h2{
+        position: relative;
+        @extend %fonts;
+        left: -40px;
+        @extend %titre;
+        font-size: 1.6rem;
+        @include for-size(desktop) { 
+            font-size: 2rem;
+         }
 
+    }
+
+    .restaurantbloc_love{
+        position: relative;
+        left:-30px;
+    }
+}
 
 @keyframes rotate{
     0%{
