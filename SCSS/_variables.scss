@@ -4,4 +4,5 @@ $teriary-color: #99E2D0;
 $fond:#f6f6f6;
 $fond-locate:#eaeaea;
 $fond-footer:#353535;
-$hover-color-btn:#f5edff;
+$hover-color-btn: linear-gradient(to top, lighten($primary-color, 5), lighten($secondary-color, 5));
+$btn-color:linear-gradient(to top, $primary-color, $secondary-color);

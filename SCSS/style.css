@@ -39,13 +39,13 @@ body, .container_content p, .menu_titre h2 {
 }
 
 .btn, .fonctionnement_button, .restaurantbloc, .menu_container .menu_entrees_bloc {
-  -webkit-box-shadow: 5px 5px 8px -3px rgba(0, 0, 0, 0.25);
-  box-shadow: 5px 5px 8px -3px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 2px 15px -4px rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 2px 15px -4px rgba(0, 0, 0, 0.65);
 }
 
 .btn:hover {
-  -webkit-box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.64);
-  box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: 0px 3px 15px -4px rgba(0, 0, 0, 0.9);
+  box-shadow: 0px 3px 15px -4px rgba(0, 0, 0, 0.9);
 }
 
 .restaurantbloc img {
@@ -289,6 +289,13 @@ body {
   color: white;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background: linear-gradient(to top, #9356DC, #FF79DA);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.btn--primary:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#a16be0), to(#ff93e1));
+  background: linear-gradient(to top, #a16be0, #ff93e1);
 }
 
 .corner--rounded {
@@ -403,7 +410,7 @@ body {
 }
 
 .fonctionnement_button:hover {
-  background-color: #f5edff;
+  background-color: linear-gradient(to top, #a16be0, #ff93e1);
 }
 
 .fonctionnement_button:hover .fa-mobile-alt {
