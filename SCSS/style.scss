@@ -425,7 +425,7 @@ body{
 
          .arrow{
              position:relative;
-             right:50px;
+             right:80px;
          }
          img{
              width:180px;
@@ -589,6 +589,7 @@ body{
                 width:100px;
                 height:100px;
                 flex-grow:2;
+                font-weight: bold;
                 margin: 0 auto;
                 @include flexbox(column,center,center,nowrap);
                 transition: all 1.6s ease-in;
@@ -609,6 +610,10 @@ body{
                     white-space: nowrap;
                     overflow: hidden;
                 }
+
+                p{
+                    font-weight: 300;
+                }
             }
         }
     }
@@ -628,7 +633,7 @@ body{
     h2{
         position: relative;
         @extend %fonts;
-        left: -40px;
+        left: -100px;
         @extend %titre;
         font-size: 1.6rem;
         @include for-size(desktop) { 
@@ -639,7 +644,7 @@ body{
 
     .restaurantbloc_love{
         position: relative;
-        left:-30px;
+        left:-20px;
     }
 }
 
