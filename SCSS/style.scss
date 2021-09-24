@@ -183,7 +183,7 @@ body{
 // Partie fonctionnement
 #fonctionnement {
     padding:3%;
-    @include flexbox(column,center,center,wrap);
+    @include flexbox(column,center,flex-start,wrap);
     width:100%;
 
     @include for-size(desktop) { 
@@ -236,10 +236,14 @@ body{
 
         .fa-mobile-alt, .fa-store, .fa-list-ul{
             @extend %icon-placement-fonctionnement;   
-            color:grey;
+            color:$color-fonctionnement;
             transition: all 0.5s ease-in;
+            position: relative;
+            right: 10%;
+        }
 
-
+        a{
+            color: $color-fonctionnement;
         }
 
          .puce{
@@ -250,7 +254,7 @@ body{
             border-radius: 12px;
             font-size: 13px;
             position: absolute;
-            left:3.5%;
+            left:3%;
         
         }
 
@@ -305,7 +309,8 @@ body{
         padding:8px 30px;
         background-color:$teriary-color;
         position:absolute;
-        right: 40px;
+        right: 10px;
+        top:10px;
 
         @include for-size(desktop) { 
             right: 8%;
@@ -334,22 +339,23 @@ body{
 
         p{
             position: relative;
+            font-weight: 300;
         }
     }
 
     &_love{
-        font-size: 20px;
+        font-size: 25px;
         position: absolute;
-        right:15%;
+        right:7%;
         @include flexbox(row,center,center,wrap);
 
         .coeur-vide{
             position: relative;
-            left:20px;
+            left:25px;
             z-index:999;
             transition: all 0.5s ease;
             opacity:1;
-            color: black;
+            color: grey;
 
 
             &:hover + .coeur-plein{
