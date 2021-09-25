@@ -476,7 +476,6 @@ body{
     width: 100%;
     position: relative;
     top:-50px;
-    padding:2%;
     @include corner-rounded-menu(45px);
     background-color: $fond;
 
@@ -592,7 +591,7 @@ body{
                 font-weight: bold;
                 margin: 0 auto;
                 @include flexbox(column,center,center,nowrap);
-                transition: all 1.6s ease-in;
+                transition: all 1s ease-in;
 
 
                 &:hover + .menu_entrees_bloc_anime{
@@ -620,11 +619,10 @@ body{
 }
 
 .menu_titre{
-    padding:10%;
     width: 100%;
     @include flexbox(row,center,center,nowrap);
     position:relative;
-
+    padding-bottom: 15%;
     @include for-size(desktop) { 
         padding:2%;
     }
@@ -633,7 +631,7 @@ body{
     h2{
         position: relative;
         @extend %fonts;
-        left: -100px;
+        left: -30px;
         @extend %titre;
         font-size: 1.6rem;
         @include for-size(desktop) { 
@@ -644,7 +642,7 @@ body{
 
     .restaurantbloc_love{
         position: relative;
-        left:-20px;
+        left:30px;
     }
 }
 
