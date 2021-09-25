@@ -623,8 +623,9 @@ body{
     @include flexbox(row,center,center,nowrap);
     position:relative;
     padding-bottom: 15%;
+    padding-top:10%;
     @include for-size(desktop) { 
-        padding:2%;
+    padding:2%;
     }
     
 
