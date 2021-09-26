@@ -66,7 +66,9 @@ body{
 // Titres qui se trouvent sur la page
 .titre{
     margin-bottom: 6%;
-    font-size: 1.2rem;
+    font-size: 1.5em;
+    margin-left:3%;
+    margin-top:3%;
 
     @include for-size(desktop) { 
    margin-right:3%;
@@ -182,7 +184,6 @@ body{
 
 // Partie fonctionnement
 #fonctionnement {
-    padding:3%;
     @include flexbox(column,center,flex-start,wrap);
     width:100%;
 
@@ -265,9 +266,8 @@ body{
     @include flexbox(column,center,center,nowrap);
     width:100%;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-    padding:4%;
     background-color: $fond-locate;
     font-weight: 400;
     overflow: hidden;
@@ -279,6 +279,8 @@ body{
      }
 
      .titre{
+        align-self: flex-start;
+        padding: 2%;
         @include for-size(desktop) { 
             @include flexbox(column,center,center,wrap);
             flex-basis:100%;
