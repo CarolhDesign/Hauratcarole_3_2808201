@@ -326,9 +326,10 @@ body {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 5%;
+  padding: 4%;
   background-color: #eaeaea;
   font-weight: 400;
+  overflow: hidden;
 }
 @media (min-width: 1200px) {
   #restaurant {
@@ -358,7 +359,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 92%;
+  width: 90%;
   margin-bottom: 5%;
   position: relative;
 }

@@ -267,9 +267,10 @@ body{
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    padding:5%;
+    padding:4%;
     background-color: $fond-locate;
     font-weight: 400;
+    overflow: hidden;
 
     @include for-size(desktop) { 
         @include flexbox(row,center,center,wrap);
@@ -289,7 +290,7 @@ body{
 
 .restaurantbloc{
     @include flexbox(column,center,center,wrap);
-    width:92%;
+    width:90%;
     @extend %shadow-box;
     margin-bottom:5%;
     position:relative;
