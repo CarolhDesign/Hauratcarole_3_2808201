@@ -211,12 +211,11 @@ body{
         height:70px;
         @include flexbox(row,center,center,nowrap);
         @extend %shadow-box;
-        transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;  
 
         &:hover{
-            background-color: $hover-color-btn;
+            background-color: $hover-bg;
         }
-
         &:hover .fa-mobile-alt{
             color: $primary-color;
         }
@@ -504,6 +503,10 @@ body{
         &_titre{
             font-weight: 300;
             padding-bottom: 10%;
+
+            h3{
+                font-weight:300;
+            }
 
             @include for-size(desktop) { 
                 padding-bottom: 2%;

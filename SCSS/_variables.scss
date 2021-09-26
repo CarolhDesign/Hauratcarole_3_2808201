@@ -5,5 +5,6 @@ $fond:#f6f6f6;
 $color-fonctionnement:grey;
 $fond-locate:#eaeaea;
 $fond-footer:#353535;
+$hover-bg: lighten($primary-color,33%);
 $hover-color-btn: linear-gradient(to top, lighten($primary-color, 5), lighten($secondary-color, 5));
 $btn-color:linear-gradient(to top, $primary-color, $secondary-color);
