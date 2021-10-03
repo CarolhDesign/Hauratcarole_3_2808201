@@ -96,6 +96,9 @@ body{
         background-color:white;
         @include flexbox(row,center,center,nowrap);
         padding: 2%;
+        width:100%;
+        z-index:999;
+        @extend %shadow-box;
 
         img{
             width:180px;
@@ -107,7 +110,6 @@ body{
         width:100%;
         @include flexbox(row,center,center,nowrap);
         padding:3%;
-        border-top: 2px solid $fond-footer;
 
         p{
             font-size: 0.8rem;
@@ -133,6 +135,7 @@ body{
             padding-left:8%;
             padding-right:8%;
             text-align: center;
+            font-size:1.4rem;
         }
         p{
             padding-left:8%;
@@ -188,7 +191,7 @@ body{
     width:100%;
 
     @include for-size(desktop) { 
-        @include flexbox(row,center,center,nowrap);
+        @include flexbox(row,center,baseline,nowrap);
         padding:2%;
      }
 
@@ -243,7 +246,7 @@ body{
         }
 
         a{
-            color: $color-fonctionnement;
+            color: black;
         }
 
          .puce{
