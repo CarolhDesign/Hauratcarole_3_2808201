@@ -685,6 +685,9 @@ body {
   -webkit-animation: rotate 0.7s ease-in;
           animation: rotate 0.7s ease-in;
 }
+.menu_container .menu_entrees_bloc_anime .icon-check {
+  cursor: pointer;
+}
 .menu_container .menu_entrees_bloc_anime:hover {
   opacity: 1;
 }
