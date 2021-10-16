@@ -666,11 +666,6 @@ body {
     height: 100% !important;
   }
 }
-@media (min-width: 1800px) {
-  .menu_container .menu_entrees_bloc_anime {
-    height: 159px !important;
-  }
-}
 .menu_container .menu_entrees_bloc_anime:hover + .menu_entrees_bloc_prix {
   transform: translate(-50px);
   width: 140px;
