@@ -11,3 +11,17 @@ a:link, a:visited{
 ul li{
     list-style-type: none;
 }
+
+input{
+    border:none;
+    background:none;
+
+    &:hover{
+        border:none;
+    }
+
+    &:focus{
+        border:none;
+
+    }
+}

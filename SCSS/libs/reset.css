@@ -10,4 +10,15 @@ a:link, a:visited {
 
 ul li {
   list-style-type: none;
+}
+
+input {
+  border: none;
+  background: none;
+}
+input:hover {
+  border: none;
+}
+input:focus {
+  border: none;
 }/*# sourceMappingURL=reset.css.map */

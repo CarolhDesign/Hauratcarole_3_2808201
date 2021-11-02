@@ -110,9 +110,8 @@ body{
         width:100%;
         @include flexbox(row,center,center,nowrap);
         padding:3%;
-
-        p{
-            font-size: 0.8rem;
+        .locate_input{
+            padding:0.5%;
         }
         .fa-map-marker-alt{
             @extend %icon-placement;          
@@ -573,7 +572,12 @@ body{
                     padding-left:10%;
 
                     @include for-size(tablette) { 
-                        transform: translate(-120px);
+                        transform: translate(-100px);
+                    }
+
+                    @include for-size(tablette-landscape){
+                        transform: translate(-140px);
+
                     }
                 }    
 
@@ -637,11 +641,11 @@ body{
     position:relative;
     padding-bottom: 15%;
     padding-top:10%;
+
     @include for-size(desktop) { 
     padding:2%;
     }
     
-
     h2{
         position: relative;
         @extend %fonts;
@@ -652,11 +656,29 @@ body{
             font-size: 2rem;
          }
 
+         @include for-size(tablette) { 
+            font-size: 1.5rem;
+            left: -120px;
+         }
+         
+         @include for-size(phone-only){
+            font-size: 1.3rem;
+            left: -10px;
+         }
+
     }
 
     .restaurantbloc_love{
         position: relative;
         left:30px;
+
+        @include for-size(tablette) { 
+            left: 100px;
+         }
+         
+         @include for-size(phone-only){
+            left: 10px;
+         }
     }
 }
 
